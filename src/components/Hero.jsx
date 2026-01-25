@@ -19,7 +19,7 @@ const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center 
                                  bg-white-section from-primary-dark via-primary-blue to-secondary-teal 
-                                 overflow-hidden">
+                                 overflow-hidden pt-20 sm:pt-24 md:pt-32">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -28,32 +28,32 @@ const Hero = () => {
         }}></div>
       </div>
 
-      <div className="container mx-auto px-4 md:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-3 sm:px-4 md:px-8 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
           {/* Hero Content */}
-          <div className={`space-y-8 ${animated ? 'animate-slide-up' : 'opacity-0'}`}>
+          <div className={`space-y-6 sm:space-y-8 ${animated ? 'animate-slide-up' : 'opacity-0'}`}>
            
 
             {/* Title */}
-            <h1 className="text-4xl md:text-6xl font-bold  leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Smart Traffic
-              <span className="block text-secondary-teal">Computer Systems</span>
+              <span className="block text-gray-600">Computer Systems</span>
             </h1>
 
             {/* Description */}
-            <p className="text-xl  max-w-2xl">
+            <p className="text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed">
               Transforming urban mobility through intelligent traffic systems, 
               real-time analytics, and cutting-edge engineering solutions for 
               smarter, safer cities worldwide.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4">
-              <a href="#contact" className="btn-primary">
-                <PlayCircle size={20} />
+            <div className="flex flex-wrap gap-3 sm:gap-4">
+              <a href="#contact" className="btn-primary text-sm sm:text-base">
+                <PlayCircle size={18} className="sm:w-5 sm:h-5" />
                 Watch Demo
               </a>
-              <a href="#services" className="btn-outline">
+              <a href="#services" className="btn-outline text-sm sm:text-base">
                 Our Services
               </a>
             </div>
@@ -61,19 +61,19 @@ const Hero = () => {
           </div>
 
           {/* Hero Image */}
-          <div className={`relative ${animated ? 'animate-zoom-in' : 'opacity-0'}`}>
+          <div className={`relative hidden lg:block ${animated ? 'animate-zoom-in' : 'opacity-0'}`}>
             <div className="relative">
               <img
                 src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
                 alt="Smart Traffic Control Center"
-                className="rounded-3xl shadow-2xl w-full h-[500px] object-cover"
+                className="rounded-2xl sm:rounded-3xl shadow-2xl w-full h-64 sm:h-80 md:h-96 lg:h-96 object-cover"
               />
               {/* Floating Elements */}
-              <div className="absolute -top-5 -left-6 w-24 h-24 bg-secondary-teal/20 
-                            rounded-2xl backdrop-blur-sm border border-white/20 
+              <div className="absolute -top-4 sm:-top-5 -left-4 sm:-left-6 w-16 sm:w-24 h-16 sm:h-24 bg-gray-500/10 
+                            rounded-xl sm:rounded-2xl backdrop-blur-sm border border-white/20 
                             animate-pulse"></div>
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary-blue/20 
-                            rounded-2xl backdrop-blur-sm border border-white/20 
+              <div className="absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 w-20 sm:w-32 h-20 sm:h-32 bg-gray-700/10 
+                            rounded-xl sm:rounded-2xl backdrop-blur-sm border border-white/20 
                             animate-pulse delay-1000"></div>
             </div>
           </div>
@@ -81,10 +81,10 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2">
         <div className="animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/70 rounded-full mt-2"></div>
+          <div className="w-5 sm:w-6 h-8 sm:h-10 border-2 border-white/50 rounded-full flex justify-center">
+            <div className="w-0.5 sm:w-1 h-2 sm:h-3 bg-white/70 rounded-full mt-1.5 sm:mt-2"></div>
           </div>
         </div>
       </div>
