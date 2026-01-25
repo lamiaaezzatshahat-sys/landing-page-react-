@@ -5,8 +5,12 @@ import {
   ParkingCircle, Bus, Wifi, Cloud 
 } from 'lucide-react';
 import ScrollFloat from './ScrollFloat';
+
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+import ShipHub from '../assets/imgs/serves/ShipHub_logo1-removebg-preview.png';
+import ShipHub_imgs from '../assets/imgs/serves/thailand_featured.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,11 +43,11 @@ const Services = () => {
       image: 'https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
     },
     {
-      icon: Brain,
-      title: 'AI Traffic Management',
-      description: 'Intelligent traffic control using artificial intelligence and machine learning.',
-      features: ['Traffic Prediction', 'Pattern Recognition', 'Anomaly Detection'],
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      icon: Car, // Using Car icon as placeholder, you can import a custom icon
+      title: 'ShipHub Service App',
+      description: ' Our ShipHub service app streamlines the process of managing, tracking, and fulfilling delivery requests for businesses and individuals. With a user-friendly interface, real-time tracking, and robust admin controls, it ensures efficient logistics management from request creation to final delivery..',
+      features: ['Real-time tracking of shipments for users and drivers','Warehouse and resource management for optimized logistics'],
+      image: ShipHub_imgs
     },
     {
       icon: BarChart3,
@@ -77,7 +81,7 @@ const Services = () => {
 
   return (
     <section id="services" className="py-20 bg-dark-section text-zinc-50 mt-12">
-      <div className="container mx-auto px-4 md:px-8">
+      <div className="container mx-auto px-4 md:px-8 ">
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 text-primary-blue 
@@ -85,6 +89,8 @@ const Services = () => {
             {/* <div className="w-3 h-3 bg-secondary-teal rounded-full"></div> */}
             <h2 className='text-4xl font-bold text-zinc-50 text-center'>Our Services</h2>
           </div>
+
+          
           <ScrollFloat
             animationDuration={1}
             ease='back.inOut(2)'
@@ -92,25 +98,27 @@ const Services = () => {
             scrollEnd='bottom bottom-=40%'
             stagger={0.04}
             containerClassName="section-title text-amber-100"
+            textClassName="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 text-white"
           >
             Comprehensive Traffic Solutions
           </ScrollFloat>
-          <p className="text-lg text-white max-w-2xl mx-auto">
+          
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto mt-4">
             We deliver end-to-end traffic management systems powered by 
             technology and engineering excellence.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {services.map((service, index) => (
             <div
               key={service.title}
-              className="bg-white rounded-2xl overflow-hidden shadow-lg 
+              className="bg-white rounded-xl sm:rounded-2xl overflow-hidden shadow-lg 
                         card-hover border border-gray-100 service-card"
             >
               {/* Service Image */}
-              <div className="h-48 overflow-hidden">
+              <div className="h-40 sm:h-44 md:h-48 overflow-hidden">
                 <img
                   src={service.image}
                   alt={service.title}
@@ -120,35 +128,35 @@ const Services = () => {
               </div>
 
               {/* Service Content */}
-              <div className="p-6">
+              <div className="p-4 sm:p-5 md:p-6">
                 {/* Icon */}
-                <div className="w-16 h-16 bg-linear-to-r/srgb from-blue-900 to-slate-900 
-                 from-primary-blue to-secondary-teal 
-                              rounded-xl flex items-center justify-center mb-4 shadow-lg">
-                  <service.icon className="w-8 h-8 text-white" />
+                <div className="w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 bg-linear-to-br 
+                 from-gray-900 to-gray-600 
+                              rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-4 shadow-lg">
+                  <service.icon className="w-6 sm:w-7 md:w-8 h-6 sm:h-7 md:h-8 text-white" />
                 </div>
 
                 {/* Title & Description */}
-                <h3 className="text-xl font-bold text-primary-dark mb-3 text-gray-800">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
+                <p className="text-xs sm:text-sm md:text-base text-gray-600 mb-3 sm:mb-4">{service.description}</p>
 
                 {/* Features */}
-                <ul className="space-y-2 mb-6  text-gray-700">
+                <ul className="space-y-1.5 sm:space-y-2 mb-4 sm:mb-6 text-gray-700">
                   {service.features.map((feature) => (
-                    <li key={feature} className="flex items-center text-sm">
-                      <div className="w-2 h-2 bg-secondary-teal rounded-full mr-3"></div>
-                      {feature}
+                    <li key={feature} className="flex items-start text-xs sm:text-sm">
+                      <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mr-2 shrink-0 mt-1.5"></div>
+                      <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
 
                 {/* Learn More Button */}
-                <button className="text-primary-blue font-semibold flex items-center 
-                                 hover:text-primary-dark transition-colors duration-300  text-gray-800">
-                  Learn More
-                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" 
+                <button className="text-gray-700 font-semibold flex items-center text-xs sm:text-sm
+                                 hover:text-gray-900 transition-colors duration-300">
+                  Go TO Service
+                  <svg className="w-3 sm:w-4 h-3 sm:h-4 ml-1.5 sm:ml-2" fill="none" stroke="currentColor" 
                        viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" 
                           strokeWidth="2" d="M9 5l7 7-7 7"/>

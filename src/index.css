@@ -2,37 +2,27 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700&display=swap');
 
-@theme {
-  --font-sans: Montserrat, sans-serif;
-  --font-heading: Poppins, sans-serif;
-
-  --animate-fade-in: fadeIn 0.8s ease-in-out;
-  --animate-slide-up: slideUp 0.8s ease-in-out;
-  --animate-zoom-in: zoomIn 0.5s ease-in-out;
-}
-
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes slideUp {
-  0% { transform: translateY(30px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes zoomIn {
-  0% { transform: scale(0.95); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+  opacity: 0;
 }
 
 :root {
-  --color-primary-blue: #0F0F0F ;
-  --color-primary-dark: #2B2B2B ;
-  --color-secondary-teal: #6E6E6E ;
-  --color-third: #F4F4F4  ;
-  --color-fourth: #FFFFFF ;
-  --Color-fifth: #B89B5E  ;
+  --color-primary-blue: #000000;
+  --color-primary-dark: #1F2937;
+  --color-secondary-dark: #111827;
+  --color-secondary-teal: #6B7280;
+  --color-accent-gold: #D4AF37;
+  --color-light-bg: #F9FAFB;
+  --color-text-dark: #111827;
+  --color-text-light: #F3F4F6;
+  --color-border: #E5E7EB;
+  --color-white: #FFFFFF;
 }
 
 
@@ -61,14 +51,36 @@ h1, h2, h3, h4, h5, h6 {
 /*  */
 
 
+.but_whatsapp {
+  background: #25D366;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  border: 1px solid #25D366;
 
+  gap: 0.5rem;
+  box-shadow: 0 4px 6px rgba(37, 211, 102, 0.2);
+}
+.but_whatsapp:hover{
+  color: white;
+  border: 1px solid #20BA5A;
+  box-shadow: 0 4px 6px rgba(37, 211, 102, 0.4);
+  transform: translateY(-2px);
+  transition: all 0.3s ease-in-out;
+  background: #20BA5A;
+
+}
 
 
 
 
 
 .btn-primary {
-  background: linear-gradient(to right,rgb(0, 0, 0) , rgb(75, 85, 99));
+  background: linear-gradient(to right, #1F2937, #111827);
   color: white;
   padding: 0.75rem 2rem;
   border-radius: 9999px;
@@ -80,13 +92,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary:hover {
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   transform: translateY(-4px);
 }
 
 .btn-outline {
-  border: 2px solid rgba(0, 0, 0, 0.579);
-  color: rgb(0, 0, 0);
+  border: 2px solid #1F2937;
+  color: #1F2937;
   padding: 0.75rem 2rem;
   border-radius: 9999px;
   font-weight: 600;
@@ -98,9 +110,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-outline:hover {
-  background: linear-gradient(to right,rgb(0, 0, 0) , rgb(75, 85, 99));
+  background: linear-gradient(to right, #1F2937, #111827);
   color: white;
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   transform: translateY(-4px);
   border-color: transparent;
 
@@ -109,7 +121,7 @@ h1, h2, h3, h4, h5, h6 {
 .section-title {
   font-size: 2.25rem;
   font-weight: 700;
-  color: var(--color-primary-dark);
+  color: var(--color-text-dark);
   position: relative;
   padding-bottom: 1rem;
   margin-bottom: 2rem;
@@ -124,7 +136,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateX(-50%);
   width: 5rem;
   height: 0.25rem;
-  background-color: var(--color-secondary-teal);
+  background-color: var(--color-primary-blue);
   border-radius: 9999px;
 }
 
@@ -132,7 +144,19 @@ h1, h2, h3, h4, h5, h6 {
   .section-title {
     font-size: 3rem;
   }
+  
 }
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 3.75rem;
+  }
+  #home{
+    padding-top: 7rem;
+  }
+}
+
+
 
 .card-hover {
   transition: all 0.3s;
@@ -140,6 +164,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .card-hover:hover {
   transform: translateY(-12px);
-  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-  border-color: var(--color-primary-blue);
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15);
+  border-color: #1F2937;
 }
