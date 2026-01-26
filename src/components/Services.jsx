@@ -1,8 +1,8 @@
 // components/Services.jsx
 import React, { useEffect } from 'react';
-import { 
-  Car, Brain, BarChart3, Shield, 
-  ParkingCircle, Bus, Wifi, Cloud 
+import {
+  Car, Brain, BarChart3, Shield,
+  ParkingCircle, Bus, Wifi, Cloud
 } from 'lucide-react';
 import ScrollFloat from './ScrollFloat';
 
@@ -37,45 +37,59 @@ const Services = () => {
   const services = [
     {
       icon: Car,
-      title: 'Traffic Signal Systems',
-      description: 'Design and optimization of adaptive traffic signal control systems.',
-      features: ['Adaptive Signal Control', 'Coordinated Timing', 'Emergency Preemption'],
-      image: 'https://images.unsplash.com/photo-1549924231-f129b911e442?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      title: 'Ride Share',
+      description: 'A web-based ride-sharing platform that enables users to book individual or shared rides, select pickup and destination points on a map, split trip costs, pay via a digital wallet, and track rides in real time.',
+      features: [
+        'Individual & Shared Rides',
+        'Map-Based Booking',
+        'Cost Splitting',
+        'Digital Wallet Payments',
+        'Real-Time Tracking'
+      ],
+      image: 'https://images.unsplash.com/photo-1526726538690-5cbf956ae2fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      link: 'https://rideshare.transportationresearchcouncil.com/'
+
+
     },
     {
       icon: Car, // Using Car icon as placeholder, you can import a custom icon
       title: 'ShipHub Service App',
       description: ' Our ShipHub service app streamlines the process of managing, tracking, and fulfilling delivery requests for businesses and individuals. With a user-friendly interface, real-time tracking, and robust admin controls, it ensures efficient logistics management from request creation to final delivery..',
-      features: ['Real-time tracking of shipments for users and drivers','Warehouse and resource management for optimized logistics'],
-      image: ShipHub_imgs
+      features: ['Real-time tracking of shipments for users and drivers', 'Warehouse and resource management for optimized logistics'],
+      image: ShipHub_imgs,
+      link: 'https://shiphub.transportationresearchcouncil.com/'
     },
     {
       icon: BarChart3,
       title: 'Traffic Data Analytics',
       description: 'Comprehensive data collection and analysis using advanced sensors.',
       features: ['Real-time Monitoring', 'Predictive Analytics', 'Performance Reports'],
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      link: '#'
     },
     {
       icon: Shield,
       title: 'Traffic Safety Systems',
       description: 'Advanced safety monitoring and accident prevention systems.',
       features: ['Safety Audits', 'Risk Analysis', 'Prevention Measures'],
-      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      link: '#'
     },
     {
       icon: ParkingCircle,
       title: 'Smart Parking Solutions',
       description: 'Innovative parking management and guidance systems.',
       features: ['Parking Guidance', 'Space Detection', 'Mobile Payments'],
-      image: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      link: '#'
     },
     {
       icon: Bus,
       title: 'Public Transport Systems',
       description: 'Efficient public transportation planning and management.',
       features: ['Route Optimization', 'Fleet Management', 'Passenger Info'],
-      image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+      image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      link: '#'
     },
   ];
 
@@ -85,12 +99,12 @@ const Services = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 text-primary-blue 
-                        font-semibold uppercase tracking-wider mb-4">
+                        font-semibold  tracking-wider mb-4">
             {/* <div className="w-3 h-3 bg-secondary-teal rounded-full"></div> */}
             <h2 className='text-4xl font-bold text-zinc-50 text-center'>Our Services</h2>
           </div>
 
-          
+
           <ScrollFloat
             animationDuration={1}
             ease='back.inOut(2)'
@@ -102,9 +116,9 @@ const Services = () => {
           >
             Comprehensive Traffic Solutions
           </ScrollFloat>
-          
+
           <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto mt-4">
-            We deliver end-to-end traffic management systems powered by 
+            We deliver end-to-end traffic management systems powered by
             technology and engineering excellence.
           </p>
         </div>
@@ -153,15 +167,29 @@ const Services = () => {
                 </ul>
 
                 {/* Learn More Button */}
-                <button className="text-gray-700 font-semibold flex items-center text-xs sm:text-sm
-                                 hover:text-gray-900 transition-colors duration-300">
+                <a
+                  href={service.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-700 font-semibold flex items-center text-xs sm:text-sm
+             hover:text-gray-900 transition-colors duration-300"
+                >
                   Go TO Service
-                  <svg className="w-3 sm:w-4 h-3 sm:h-4 ml-1.5 sm:ml-2" fill="none" stroke="currentColor" 
-                       viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" 
-                          strokeWidth="2" d="M9 5l7 7-7 7"/>
+                  <svg
+                    className="w-3 sm:w-4 h-3 sm:h-4 ml-1.5 sm:ml-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M9 5l7 7-7 7"
+                    />
                   </svg>
-                </button>
+                </a>
+
               </div>
             </div>
           ))}

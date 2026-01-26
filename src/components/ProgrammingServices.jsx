@@ -57,12 +57,6 @@ const ProgrammingServices = () => {
     //   gradient: 'from-blue-500 to-cyan-500'
     // },
     {
-      icon: Database,
-      title: 'Database ',
-      description: 'Scalable database solutions for traffic data storage and analysis',
-      tech: ['PostgreSQL', 'MySQL', 'MongoDB', 'SQLite']
-    },
-    {
       icon: Cpu,
       title: 'AI & Machine Learning',
       description: 'Intelligent traffic prediction using advanced ML models',
@@ -70,18 +64,24 @@ const ProgrammingServices = () => {
       
     },
     {
-      icon: Globe,
-      title: 'Frontend Web Development',
-      description: 'Interactive traffic monitoring dashboards with real-time data',
-      tech: ['React', 'Next.js', 'wordpress', 'js'],
-      
+      icon: Database,
+      title: 'Database ',
+      description: 'Scalable database solutions for traffic data storage and analysis',
+      tech: ['PostgreSQL', 'MySQL', 'MongoDB', 'SQLite']
     },
+    
+    // {
+    //   icon: Globe,
+    //   title: 'Frontend Web Development',
+    //   description: 'Interactive traffic monitoring dashboards with real-time data',
+    //   tech: [],
+      
+    // },
      {
       icon: Cloud,
-      title: 'Backend Web Development',
-      
+      title: 'Web Development',
       description: 'Interactive traffic monitoring dashboards with real-time data',
-      tech: ['Laravel', 'Django', 'Nestjs'],
+      tech: ['Laravel', 'Django', 'Nestjs','React', 'Next.js', 'wordpress', 'js'],
       color: 'bg-indigo-500',
       gradient: 'from-indigo-500 to-blue-500'
     },
@@ -101,14 +101,13 @@ const ProgrammingServices = () => {
       <div className="container mx-auto px-3 sm:px-4 md:px-8">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center space-x-2 text-white 
-                        font-semibold uppercase tracking-wider mb-3 sm:mb-4 text-xs sm:text-sm">
-            <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-gray-400 rounded-full"></div>
-            <h2 className='text-2xl sm:text-3xl md:text-4xl font-bold text-zinc-50 text-center'>Our Capabilities</h2>
+          <div className="inline-flex items-center space-x-2 text-white  
+                        font-semibold  tracking-wider mb-8 sm:mb-8 text-xs sm:text-sm">
+            <h2 className='text-4xl sm:text-4xl md:text-4xl font-bold text-zinc-50 text-center mb-4'>Our Capabilities</h2>
           </div>
-          <h5 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-8">
-            our team Capabilities in Programming <span className="text-gray-400">Programming</span>
-          </h5>
+          <h6 className="text-2xl sm:text-2xl md:text-2xl  text-white mb-4 sm:mb-8">
+            Our Team Capabilities in Programming 
+          </h6>
           <p className="text-sm sm:text-base md:text-lg text-white/90 max-w-2xl mx-auto">
             Custom software development for advanced traffic management applications
           </p>
@@ -152,7 +151,7 @@ const ProgrammingServices = () => {
               </div>
 
               {/* Learn More */}
-              <button className=" font-semibold flex items-center 
+              {/* <button className=" font-semibold flex items-center 
                                hover:text-secondary-teal transition-colors duration-300">
                 View Projects
                 <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" 
@@ -160,7 +159,7 @@ const ProgrammingServices = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" 
                         strokeWidth="2" d="M9 5l7 7-7 7"/>
                 </svg>
-              </button>
+              </button> */}
             </div>
           ))}
         </div>
