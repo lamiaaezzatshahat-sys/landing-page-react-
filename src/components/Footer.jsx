@@ -1,5 +1,6 @@
 // components/Footer.jsx
 import React from 'react';
+import slogin from '../assets/imgs/logononback.png';
 import { 
   Car, Mail, Phone, MapPin, 
   Facebook, Twitter, Linkedin, Instagram, Youtube 
@@ -27,11 +28,9 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Facebook, label: 'Facebook' },
-    { icon: Twitter, label: 'Twitter' },
-    { icon: Linkedin, label: 'LinkedIn' },
-    { icon: Instagram, label: 'Instagram' },
-    { icon: Youtube, label: 'YouTube' },
+    
+    { icon: Linkedin, label: 'LinkedIn' }
+   
   ];
 
   return (
@@ -41,15 +40,15 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center space-x-2 sm:space-x-3 mb-4 sm:mb-6">
-            <div className="w-10 sm:w-12 h-10 sm:h-12 bg-linear-to-br from-gray-900 to-gray-600 
-                            rounded-lg sm:rounded-xl flex items-center justify-center shrink-0">
-              <Car className="w-5 sm:w-6 h-5 sm:h-6 text-white" />
+              <div className="w-10 sm:w-12 h-10 sm:h-12 bg-white/80 
+                              rounded-lg sm:rounded-xl flex items-center justify-center shrink-0">
+                <img src={slogin} alt="Logo" className="w-6 sm:w-8 h-6 sm:h-8" />
               </div>
               <div>
-                <h3 className="text-lg sm:text-2xl font-bold">Smart Traffic</h3>
-                <p className="text-white/70 text-xs sm:text-sm">Computer System</p>
+                <h3 className="text-lg sm:text-2xl font-bold">Smart Traffic <br />Computer Systems</h3>
               </div>
             </div>
+            
             <p className="text-white/80 text-xs sm:text-sm md:text-base mb-6 sm:mb-8 leading-relaxed">
               Leading provider of intelligent traffic management and 
               engineering solutions powered by cutting-edge technology.
@@ -60,7 +59,7 @@ const Footer = () => {
                   key={social.label}
                   href="#"
                   className="w-8 sm:w-10 h-8 sm:h-10 bg-white/10 rounded-lg flex items-center 
-                           justify-center hover:bg-gray-700 transition-colors hover:text-white"
+                          justify-center hover:bg-gray-700 transition-colors hover:text-white"
                   aria-label={social.label}
                 >
                   <social.icon className="w-4 sm:w-5 h-4 sm:h-5 hover:text-gray-400 hover:transition-colors" />
@@ -169,7 +168,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-white/10 text-center">
           <p className="text-white/70 text-xs sm:text-sm">
-            &copy; {currentYear} Smart Traffic Computer System. All rights reserved.
+            &copy; {currentYear} Smart Traffic Computer Systems. All rights reserved.
           </p>
           <div className="mt-3 sm:mt-4 flex flex-wrap justify-center gap-3 sm:gap-6 text-xs sm:text-sm">
             <a href="#" className="text-white/70 hover:text-white transition-colors">
@@ -184,6 +183,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+    
     </footer>
   );
 };

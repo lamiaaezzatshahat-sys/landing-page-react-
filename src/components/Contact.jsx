@@ -88,11 +88,10 @@ const Contact = () => {
         <div className="text-center mb-12 sm:mb-16">
           <div className="inline-flex items-center space-x-2 text-gray-700 
                         font-semibold uppercase tracking-wider mb-3 sm:mb-4 text-xs sm:text-sm">
-            <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-gray-400 rounded-full"></div>
             <span>Get In Touch</span>
           </div>
           <h2 className="section-title text-2xl sm:text-3xl md:text-4xl">
-            Contact <span className="text-gray-700">Our Team</span>
+            Contact Our Team
           </h2>
           <p className="text-xs sm:text-sm md:text-lg text-gray-600 max-w-2xl mx-auto mt-3 sm:mt-4">
             Let's discuss how we can transform your traffic management systems
@@ -110,8 +109,8 @@ const Contact = () => {
                 {contactInfo.map((info) => (
                   <div key={info.title} className="flex items-start space-x-3 sm:space-x-4">
                     <div className={`w-10 sm:w-12 h-10 sm:h-12 ${info.color} rounded-lg sm:rounded-xl flex 
-                                  items-center justify-center shrink-0`}>
-                      <info.icon className="w-5 sm:w-6 h-5 sm:h-6" />
+                                  items-center justify-center shrink-0 bg-white/90 shadow-sm` }>
+                      <info.icon className="w-5 sm:w-6 h-5 sm:h-6 text-gray-800" />
                     </div>
                     <div>
                       <h4 className="font-bold text-base sm:text-lg mb-0.5 sm:mb-1">{info.title}</h4>
@@ -121,22 +120,7 @@ const Contact = () => {
                 ))}
               </div>
 
-              {/* Social Links */}
-              {/* <div className="mt-6 sm:mt-10 pt-6 sm:pt-8 border-t border-white/20">
-                <h4 className="font-bold text-base sm:text-lg mb-3 sm:mb-4">Follow Us</h4>
-                <div className="flex space-x-2 sm:space-x-4">
-                  {['Twitter', 'LinkedIn', 'Facebook', 'Instagram', 'YouTube'].map((social) => (
-                    <a
-                      key={social}
-                      href="#"
-                      className="w-8 sm:w-10 h-8 sm:h-10 bg-white/20 flex items-center 
-                               justify-center hover:bg-white/30 transition-colors rounded-lg text-xs sm:text-sm font-semibold"
-                    >
-                      {social.charAt(0)}
-                    </a>
-                  ))}
-                </div>
-              </div> */}
+              
             </div>
 
             {/* Map Placeholder */}

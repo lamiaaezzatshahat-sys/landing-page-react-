@@ -19,7 +19,7 @@ const Hero = () => {
   return (
     <section id="home" className="relative min-h-screen flex items-center 
                                  bg-white-section from-primary-dark via-primary-blue to-secondary-teal 
-                                 overflow-hidden pt-20 sm:pt-24 md:pt-32">
+                                 overflow-hidden  ">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -36,8 +36,8 @@ const Hero = () => {
 
             {/* Title */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Smart Traffic
-              <span className="block text-gray-600">Computer Systems</span>
+              Smart Traffic <br />
+              Computer Systems
             </h1>
 
             {/* Description */}
