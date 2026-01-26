@@ -39,8 +39,7 @@ const Navbar = () => {
               <img src={slogin} alt='Logo' className='w-full h-full border-r border-gray-600 object-contain'/>
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-lg sm:text-2xl font-bold text-gray-900">Smart Traffic</h1>
-              <p className="text-xs text-gray-500">Computer Systems</p>
+              <h1 className="text-lg sm:text-2xl font-bold text-gray-900">Smart Traffic <br />Computer Systems</h1>
             </div>
           </a>
 
