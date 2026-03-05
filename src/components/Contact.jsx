@@ -69,7 +69,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      details: 'sales@smartaitraffic.com',
+      details: 'info@smartaitraffic.com',
       color: 'bg-purple-500'
     },
     {
