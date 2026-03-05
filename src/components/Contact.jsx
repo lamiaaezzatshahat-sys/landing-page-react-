@@ -1,10 +1,10 @@
 // components/Contact.jsx
 import React, { useState } from 'react';
-import { 
-  Mail, Phone, MapPin, Clock, 
-  Send, CheckCircle, AlertCircle 
+import {
+  Mail, Phone, MapPin, Clock,
+  Send, CheckCircle, AlertCircle
 } from 'lucide-react';
-
+import emailjs from "@emailjs/browser";
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -22,46 +22,54 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    
-    // Simulate API call
-    setStatus('loading');
-    
-    setTimeout(() => {
-      setStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        service: '',
-        message: ''
+    setStatus("loading");
+
+    emailjs.send(
+      "service_u5skmsc",
+      "template_8k1z2gg",
+      {
+        name: formData.name,
+        email: formData.email,
+        title: formData.service,
+        company: formData.company,
+        message: formData.message,
+      },
+      "yyY4E9zjwoEFQa6iL"
+    )
+      .then(() => {
+        setStatus("success");
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          service: "",
+          message: "",
+        });
+      })
+      .catch(() => {
+        setStatus("error");
       });
-      
-      // Reset status after 5 seconds
-      setTimeout(() => {
-        setStatus(null);
-      }, 5000);
-    }, 1500);
   };
 
   const contactInfo = [
     {
       icon: MapPin,
       title: 'Address',
-      details: '53 Dr Hasan El-Shareef, Al Manteqah Ath Thamenah, Nasr City, Cairo Governorate 4441576, Egypt',
+      details: 'Abu Dhabi, United Arab Emirates',
       color: 'bg-blue-500'
     },
     {
       icon: Phone,
       title: 'Phone',
-      details: '+201227340564',
+      details: '+201069847600',
       color: 'bg-green-500'
     },
     {
       icon: Mail,
       title: 'Email',
-      details: 'info@smarttraffic.com',
+      details: 'sales@smartaitraffic.com',
       color: 'bg-purple-500'
     },
     {
@@ -101,10 +109,10 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12">
           {/* Contact Information */}
           <div className="space-y-6 sm:space-y-8">
-            <div className="bg-linear-to-br from-gray-900 to-gray-700 
+            <div className="bg-gradient-to-br from-gray-900 to-gray-700 
                           rounded-xl sm:rounded-2xl p-6 sm:p-8 text-white shadow-lg">
               <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Contact Information</h3>
-              
+
               <div className="space-y-4 sm:space-y-6">
                 {contactInfo.map((info) => (
                   <div key={info.title} className="flex items-start space-x-3 sm:space-x-4">
@@ -120,18 +128,21 @@ const Contact = () => {
                 ))}
               </div>
 
-              
+
             </div>
 
             {/* Map Placeholder */}
             <div className="bg-gray-100 rounded-xl sm:rounded-2xl h-48 sm:h-56 md:h-64 w-full overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.547779118894!2d31.356464700000007!3d30.049829100000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583d6b4b4f0cc5%3A0x50969e53ec2f8860!2sE%20SPACES!5e0!3m2!1sen!2seg!4v1723063777146!5m2!1sen!2seg"
-                className="w-full h-full border-0 p-0 rounded-xl sm:rounded-2xl"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d442118.5813968494!2d54.22896072524702!3d24.386473908627888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e440f723ef2b9%3A0xc7cc2e9341971108!2sAbu%20Dhabi%20-%20United%20Arab%20Emirates!5e1!3m2!1sen!2seg!4v1772670334413!5m2!1sen!2seg"
+                width="600"
+                height="450"
+                style={{ border: 0 }}
                 allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+             
             </div>
           </div>
 

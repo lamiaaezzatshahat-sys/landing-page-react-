@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { PlayCircle, TrendingUp, Shield, Globe } from 'lucide-react';
+import software_img from '../assets/imgs/software.jpg';
 
 const Hero = () => {
   const [animated, setAnimated] = useState(false);
@@ -9,17 +10,11 @@ const Hero = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const stats = [
-    { number: '650+', label: 'Projects Completed', icon: TrendingUp },
-    { number: '40%', label: 'Traffic Reduction', icon: TrendingUp },
-    { number: '150+', label: 'Cities Worldwide', icon: Globe },
-    { number: '99%', label: 'System Uptime', icon: Shield },
-  ];
 
   return (
     <section id="home" className="relative min-h-screen flex items-center 
                                  bg-white-section from-primary-dark via-primary-blue to-secondary-teal 
-                                 overflow-hidden  ">
+                                 overflow-hidden pt-12 ">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{
@@ -28,7 +23,7 @@ const Hero = () => {
         }}></div>
       </div>
 
-      <div className="container mx-auto px-3 sm:px-4 md:px-8 relative z-10">
+      <div className="container mx-auto px-3 sm:px-4 md:px-8 relative z-10 pt-12">
         <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center">
           {/* Hero Content */}
           <div className={`space-y-6 sm:space-y-8 ${animated ? 'animate-slide-up' : 'opacity-0'}`}>
@@ -42,9 +37,16 @@ const Hero = () => {
 
             {/* Description */}
             <p className="text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed">
-              Transforming urban mobility through intelligent traffic systems, 
-              real-time analytics, and cutting-edge engineering solutions for 
-              smarter, safer cities worldwide.
+              Smart Traffic Computer Systems (STCS) develops practical technology solutions for traffic analysis and logistics operations.
+            </p>
+
+            <p>We work with consultants, infrastructure projects, and logistics operators to build systems that simplify traffic data processing, improve operational visibility, and support better planning decisions.
+
+           
+            <br />
+            Our focus is on creating reliable tools that combine traffic knowledge with modern software development, helping organizations manage complex mobility and logistics challenges more efficiently.
+            <br />
+            STCS aims to support the shift toward smarter infrastructure by delivering systems that turn raw data into clear and useful insights.
             </p>
 
             {/* CTA Buttons */}
@@ -64,7 +66,7 @@ const Hero = () => {
           <div className={`relative hidden lg:block ${animated ? 'animate-zoom-in' : 'opacity-0'}`}>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                src={software_img}
                 alt="Smart Traffic Control Center"
                 className="rounded-2xl sm:rounded-3xl shadow-2xl w-full h-64 sm:h-80 md:h-96 lg:h-96 object-cover"
               />
