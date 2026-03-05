@@ -129,19 +129,19 @@ const Footer = () => {
               <div className="flex items-start space-x-2 sm:space-x-3">
                 <MapPin className="w-4 sm:w-5 h-4 sm:h-5 text-gray-400 shrink-0 mt-0.5 sm:mt-1" />
                 <p className="text-white/80 text-xs sm:text-sm leading-snug">
-                  53 Dr Hasan El-Shareef, Al Manteqah Ath Thamenah, Nasr City, Cairo Governorate 4441576, Egypt
+                 Abu Dhabi, United Arab Emirates
                 </p>
               </div>
               <div className="flex items-center space-x-2 sm:space-x-3">
                 <Phone className="w-4 sm:w-5 h-4 sm:h-5 text-gray-400 shrink-0" />
-                <a href="tel:+201227340564" className="text-white/80 hover:text-white text-xs sm:text-sm">
-                 +201227340564
+                <a href="tel:+201069847600" className="text-white/80 hover:text-white text-xs sm:text-sm">
+                 +201069847600
                 </a>
               </div>
               <div className="flex items-center space-x-2 sm:space-x-3">
                 <Mail className="w-4 sm:w-5 h-4 sm:h-5 text-gray-400 shrink-0" />
-                <a href="mailto:info@smarttraffic.com" className="text-white/80 hover:text-white text-xs sm:text-sm break-all">
-                  info@smarttraffic.com
+                <a href="mailto:sales@smartaitraffic.com" className="text-white/80 hover:text-white text-xs sm:text-sm break-all">
+                  sales@smartaitraffic.com
                 </a>
               </div>
             </div>

@@ -22,7 +22,6 @@ const Navbar = () => {
   const navItems = [
     { name: 'Home', href: '#home' },
     { name: 'Services', href: '#services' },
-    { name: 'Gallery', href: '#gallery' },
     { name: 'Capabilities', href: '#capabilities' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -39,8 +38,7 @@ const Navbar = () => {
               <img src={slogin} alt='Logo' className='w-full h-full border-r border-gray-600 object-contain'/>
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-lg sm:text-2xl font-bold text-gray-900">Smart Traffic</h1>
-              <p className="text-xs text-gray-500">Computer Systems</p>
+              <h1 className="text-lg sm:text-2xl font-bold text-gray-900">Smart Traffic <br />Computer Systems</h1>
             </div>
           </a>
 
@@ -55,12 +53,12 @@ const Navbar = () => {
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 
-                               bg-linear-to-r from-gray-900 to-gray-600 
+                               bg-gradient-to-r from-gray-900 to-gray-600 
                                group-hover:w-full transition-all duration-300"></span>
               </a>
             ))}
             <a
-              href="https://wa.me/201096807359"
+              href="https://wa.me/201069847600"
               className="but_whatsapp justify-center text-sm lg:text-base ml-2"
               target="_blank"
               rel="noopener noreferrer"
@@ -97,7 +95,7 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="https://wa.me/201096807359"
+              href="https://wa.me/201069847600"
               className="but_whatsapp justify-center text-sm sm:text-base block mt-2 sm:mt-4"
               target="_blank"
               rel="noopener noreferrer"

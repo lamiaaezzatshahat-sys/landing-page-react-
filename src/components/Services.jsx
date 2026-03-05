@@ -8,10 +8,9 @@ import ScrollFloat from './ScrollFloat';
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-import ShipHub from '../assets/imgs/serves/ShipHub_logo1-removebg-preview.png';
-import ShipHub_imgs from '../assets/imgs/serves/thailand_featured.png';
-
+import smart_count_img from '../assets/imgs/serves/smart_count/mart_count_img.png';
+import ShipHub_imgs from '../assets/imgs/serves/shipHup/logistic.avif';
+import ride_share_img from '../assets/imgs/serves/ride share/ride_share_img.png';
 gsap.registerPlugin(ScrollTrigger);
 
 const Services = () => {
@@ -46,8 +45,8 @@ const Services = () => {
         'Digital Wallet Payments',
         'Real-Time Tracking'
       ],
-      image: 'https://images.unsplash.com/photo-1526726538690-5cbf956ae2fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      link: 'https://rideshare.transportationresearchcouncil.com/'
+      image: ride_share_img,
+      link: 'https://rideshare-lp.transportationresearchcouncil.com/'
 
 
     },
@@ -57,15 +56,20 @@ const Services = () => {
       description: ' Our ShipHub service app streamlines the process of managing, tracking, and fulfilling delivery requests for businesses and individuals. With a user-friendly interface, real-time tracking, and robust admin controls, it ensures efficient logistics management from request creation to final delivery..',
       features: ['Real-time tracking of shipments for users and drivers', 'Warehouse and resource management for optimized logistics'],
       image: ShipHub_imgs,
-      link: 'https://shiphub.transportationresearchcouncil.com/'
+      link: 'https://lamiaaezzatshahat-sys.github.io/ShipHub/'
     },
     {
       icon: BarChart3,
-      title: 'Traffic Data Analytics',
-      description: 'Comprehensive data collection and analysis using advanced sensors.',
-      features: ['Real-time Monitoring', 'Predictive Analytics', 'Performance Reports'],
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      link: '#'
+      title: 'Trafficount',
+      description: 'AI-powered video analysis that automatically counts vehicles and detects different vehicle types from traffic footage.',
+      features: [
+        'Automatic vehicle counting',
+        'Vehicle type detection',
+        'Reduce time and costs by eliminating manual video review',
+        'Detailed traffic analysis reports'
+      ],
+      image: smart_count_img,
+      link: 'https://lamiaaezzatshahat-sys.github.io/smart_traffic_Ai/'
     },
     {
       icon: Shield,
@@ -125,7 +129,7 @@ const Services = () => {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <div
               key={service.title}
               className="bg-white rounded-xl sm:rounded-2xl overflow-hidden shadow-lg 
@@ -144,7 +148,7 @@ const Services = () => {
               {/* Service Content */}
               <div className="p-4 sm:p-5 md:p-6">
                 {/* Icon */}
-                <div className="w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 bg-linear-to-br 
+                <div className="w-12 sm:w-14 md:w-16 h-12 sm:h-14 md:h-16 bg-gradient-to-br 
                  from-gray-900 to-gray-600 
                               rounded-lg sm:rounded-xl flex items-center justify-center mb-3 sm:mb-4 shadow-lg">
                   <service.icon className="w-6 sm:w-7 md:w-8 h-6 sm:h-7 md:h-8 text-white" />
